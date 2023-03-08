@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet 2</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    </head>
+    <body>
+        <nav>
+            <div class="profil">
+                <img src="images/pp.jpg" alt="photo de profil"/></img>
+                <h1>Quentin OLIER</h1>
+            </div>
+            
+            <ul>
+                <a href="index.html"><li>Retour menu</li></a>
+                <a href="images/CV-Petzl.pdf"><li>CV</li></a>
+                <a href=""><li>Mes projets 
+                    <ul class="menu-projet">
+                        <a href="Projet1.html"><li>Projet 1</li></a>
+                        <a href="Projet2.html"><li>Projet 2</li></a>
+                        <a href="Projet3.html"><li>Projet 3</li></a>
+                    </ul>
+                </li></a>
+                <a href="Competences_tech_mp.html"><li>Compétences Technicien MP</li></a>
+            </ul>
+        </nav>
+        <nav2>
+            <img src="images/menu-button.jpg" alt="barre nav mobile" class="menu-nav-mobil">
+            <div  class="nav-link">   
+                <ul>
+                    <a href="index.html"><li>Retour menu</li></a>
+                    <a href="images/CV-Petzl.pdf"><li>CV</li></a>
+                    <a href=""><li>Mes projets 
+                        <ul class="menu-projet">
+                            <a href="Projet1.html"><li>-Projet 1</li></a>
+                            <a href="Projet2.html"><li>-Projet 2</li></a>
+                            <a href="Projet3.html"><li>-Projet 3</li></a>
+                        </ul>                    
+                    </li></a>
+                    <a href="Competences_tech_mp.html"><li>Compétences Technicien MP</li></a>
+                </ul>
+            </div>
+        </nav2>
+        <section class="page-content">
+ 
+            <section class="presentation-image">
+                <img src="images/Portfolio canva- OLIER Quentin/3.png" alt="python" height="auto" width="100%">
+            </section> 
+        </section>
+        <footer>
+            <div class="column">
+                <h3>Me contacter</h3>
+                <p>quentinerwan.olier@gmail.com</p>
+                <p>quentin.olier@etu.univ-tours.fr</p>
+            </div>
+            <div class="column">
+                <h3>Mes experiences</h3>
+                <p>Stage chez Petzl</p>
+                <p>Animateur saisonnier</p>
+                <p>Mes projets</p>
+            </div>
+            <div class="column">
+                <h3>Dernière MàJ</h3>
+                <p>29-01-23</p>
+            </div>
+        </footer>
+    </body>
+    <script>
+        const barrenav = document.querySelector(".menu-nav-mobil")
+        const navLinks = document.querySelector(".nav-link")
+ 
+        barrenav.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</html>

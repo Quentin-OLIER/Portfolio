@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Quentin OLIER</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="./popup.js" defer></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">            
+    </head>
+
+    
+    <body>
+        <nav>
+            <div class="profil">
+                <img src="images/pp.jpg" alt="photo de profil"/></img>
+                <h1>Quentin OLIER</h1>
+            </div>
+            
+            <ul>
+                <a href="index.html"><li>retour menu</li></a>
+                <a href="images/CV-Petzl.pdf"><li>CV</li></a>
+                <a ><li>Stage</li></a>
+                <a href=""><li>Mes projets 
+                    <ul class="menu-projet">
+                        <a href="Projet1.html"><li>Projet 1</li></a>
+                        <a href="Projet2.html"><li>Projet 2</li></a>
+                        <a href="Projet3.html"><li>Projet 3</li></a>
+                    </ul>
+                </li></a>
+
+            </ul>
+        </nav>
+        <nav2>
+            <img src="images/menu-button.jpg" alt="barre nav mobile" class="menu-nav-mobil">
+            <div  class="nav-link">   
+                <ul>
+                    <a href="index.html"><li>Retour menu</li></a>
+                    <a href="images/CV-Petzl.pdf"><li>CV</li></a>
+                    <a href=""><li>Mes projets 
+                        <ul class="menu-projet">
+                            <a href="Projet1.html"><li>-Projet 1</li></a>
+                            <a href="Projet2.html"><li>-Projet 2</li></a>
+                            <a href="Projet3.html"><li>-Projet 3</li></a>
+                        </ul>                    
+                    </li></a>
+                </ul>
+            </div>
+        </nav2>
+        <section class="page-content">
+            <header>
+                <h1>Technicien en Mesures Physiques.</h1>
+                <p><a href="images/Competences_MP.pdf"> <u>Compétences Technicien MP officielles</u></a></p>
+                <h2>Exemples illustrés : </h2>
+                </header>
+                <div class="button-competence">
+                <button data-popup-ref="monPopup">Traiter des données de mesures</button>
+                <button data-popup-ref="monPopup2">Concevoir pièce système industriel</button>
+                <button data-popup-ref="monPopup3">Réaliser une étude métrologique</button>
+                <button data-popup-ref="monPopup4">Mettre en oeuvre des mesures électrique</button>
+                <button data-popup-ref="monPopup5">Concevoir et coder des utilitaires informatiques</button>
+                <button data-popup-ref="monPopup6">Mettre en oeuvre des analyses chimiques</button>
+                <button data-popup-ref="monPopup7">Mettre en oeuvre des mesures pour la conversion d'énergie</button>
+                <button data-popup-ref="monPopup8">Organiser un projet en équipe</button>
+                </div>
+
+                <div class="popup" data-popup-id="monPopup">
+                    <div class="popup-content">
+                      <div class="popup-header">
+                        <div class="title">Traiter des données de mesures</div>
+                        <span class="btn-close" data-dismiss-popup> &times; </span>
+                      </div>
+                      <div class="popup-body">
+                        <h1>Programmation sous R</h1>
+                        <p>CR du TP Exam métrologie rédigé sous R et markdown.
+                          Traitement statistique de données et CR automatiquement édité sur une page HTML avec sommaire automatique. Calcul de régréssion linéaire, Incertitudes, résidus etc...
+                        </p>
+                        <img src="/images/CR_TP_exam_metro.png" width=100%>
+                        <h1>Traitement de données sous Excel</h1>
+                        <p>Tracer de la concentration en fonction de la viscosité pour déterminer la zone utile d'un liquide de rinçage pour lave-vaisselle</p>
+                        <img src="/images/Zone utile liquide de rinçage.png" width=100%>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="popup" data-popup-id="monPopup2">
+                    <div class="popup-content">
+                      <div class="popup-header">
+                        <div class="title">Concevoir pièce système industriel</div>
+                        <span class="btn-close" data-dismiss-popup> &times; </span>
+                      </div>
+                      <div class="popup-body">
+                        <h1>Projet 3 - Spectromètre</h1>
+                        <p>Modelisation du spectromètre avant découpe laser du boitier.</p>
+                        <img src="/images/Portfolio- OLIER Quentin.png" width=100%>
+                        <h1>TP CAO</h1>
+                        <p>Conception assitée par ordinateur d'un circuit imprimé avec AO, résistance, LEDs et alimentation.</p>
+                        <img src="/images/SAE1.4-CAO.jpg" width=100%>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="popup" data-popup-id="monPopup3">
+                    <div class="popup-content">
+                      <div class="popup-header">
+                        <div class="title">Réaliser une étude métrologique</div>
+                        <span class="btn-close" data-dismiss-popup> &times; </span>
+                      </div>
+                      <div class="popup-body">
+                        <h1>Projet 3</h1>
+                        <p>Etude métrologique des capteurs</p>
+                        <h1>Test statistiques TP Exam métro</h1>
+                        <p>test résidus</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="popup" data-popup-id="monPopup4">
+                    <div class="popup-content">
+                      <div class="popup-header">
+                        <div class="title">Mettre en oeuvre des mesures électrique</div>
+                        <span class="btn-close" data-dismiss-popup> &times; </span>
+                      </div>
+                      <div class="popup-body">
+                        <h1>TP Elec AO et flitres</h1>
+                        <p>photo montage avec 2 AO et passe bas</p>
+                        <h1>TP Environnement Panneau solaire</h1> 
+                        <p>CR TP</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="popup" data-popup-id="monPopup5">
+                    <div class="popup-content">
+                      <div class="popup-header">
+                        <div class="title">Concevoir et coder des utilitaires informatiques</div>
+                        <span class="btn-close" data-dismiss-popup> &times; </span>
+                      </div>
+                      <div class="popup-body">
+                        <h1>Projet 3 - Spectromètre</h1>
+                        <p>Interface web d'initialisation du programme et retour résultats</p>
+                        <h1>Projet LabView</h1>
+                        <p>Tracer de Diagramme de BODE via LabView et communication entre instruments</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="popup" data-popup-id="monPopup6">
+                    <div class="popup-content">
+                      <div class="popup-header">
+                        <div class="title">Mettre en oeuvre des analyses chimiques</div>
+                        <span class="btn-close" data-dismiss-popup> &times; </span>
+                      </div>
+                      <div class="popup-body">
+                        <h1>Projet 3 - Spectromètre</h1>
+                        <p>Analyses des ions nitrites</p>
+                        <h1>Projet environnement</h1>
+                        <p>Analyses des ions nitrates</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="popup" data-popup-id="monPopup7">
+                    <div class="popup-content">
+                      <div class="popup-header">
+                        <div class="title">Mettre en oeuvre des mesures pour la conversion d'énergie</div>
+                        <span class="btn-close" data-dismiss-popup> &times; </span>
+                      </div>
+                      <div class="popup-body">
+                        <h1>Projet éolien</h1>
+                        <p>Diapo présentation</p>
+                        <h1>TP environnement Panneau solaire</h1>
+                        <p>TP Recharger des batterie via panneau solaire + onduleur pour alimentation</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="popup" data-popup-id="monPopup8">
+                    <div class="popup-content">
+                      <div class="popup-header">
+                        <div class="title">Organiser un projet en équipe</div>
+                        <span class="btn-close" data-dismiss-popup> &times; </span>
+                      </div>
+                      <div class="popup-body">
+                        <h1>Projet 3 - Spectromètre</h1>
+                        <p>Rendu Gestion de projet</p>
+                        <h1>Projet 1 - Balançoire et mesure de position</h1>
+                        <p>Digramme Ishikawa</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <footer>
+                    <div class="column">
+                        <h3>Me contacter</h3>
+                        <p>quentinerwan.olier@gmail.com</p>
+                        <p>quentin.olier@etu.univ-tours.fr</p>
+                    </div>
+                    <div class="column">
+                        <h3>Mes experiences</h3>
+                        <p>Stage chez Petzl</p>
+                        <p>Animateur saisonnier</p>
+                        <p>Mes projets</p>
+                    </div>
+                    <div class="column">
+                        <h3>Dernière MàJ</h3>
+                        <p>29-01-23</p>
+                    </div>
+                </footer>
+            </body>

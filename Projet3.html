@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet 3</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    </head>
+    <body>
+        <nav>
+            <div class="profil">
+                <img src="images/pp.jpg" alt="photo de profil"/></img>
+                <h1>Quentin OLIER</h1>
+            </div>
+            
+            <ul>
+                <a href="index.html"><li>Retour menu</li></a>
+                <a href="images/CV-Petzl.pdf"><li>CV</li></a>
+                <a href=""><li>Mes projets 
+                    <ul class="menu-projet">
+                        <a href="Projet1.html"><li>Projet 1</li></a>
+                        <a href="Projet2.html"><li>Projet 2</li></a>
+                        <a href="Projet3.html"><li>Projet 3</li></a>
+                    </ul>
+                </li></a>
+                <a href="Competences_tech_mp.html"><li>Compétences Technicien MP</li></a>
+            </ul>
+        </nav>
+        <nav2>
+            <img src="images/menu-button.jpg" alt="barre nav mobile" class="menu-nav-mobil">
+            <div  class="nav-link">   
+                <ul>
+                    <a href="index.html"><li>Retour menu</li></a>
+                    <a href="images/CV-Petzl.pdf"><li>CV</li></a>
+                    <a href=""><li>Mes projets 
+                        <ul class="menu-projet">
+                            <a href="Projet1.html"><li>-Projet 1</li></a>
+                            <a href="Projet2.html"><li>-Projet 2</li></a>
+                            <a href="Projet3.html"><li>-Projet 3</li></a>
+                        </ul>                    
+                    </li></a>
+                    <a href="Competences_tech_mp.html"><li>Compétences Technicien MP</li></a>
+                </ul>
+            </div>
+        </nav2>
+        <section class="page-content">
+                <section class="presentation-image">
+                    <img src="images/Portfolio canva- OLIER Quentin/5.png" alt="schema spectro" height="auto" width="100%">
+                </section>
+            <header>
+
+
+                <p>Création d'un spectrophotomètre pour mesurer la concentration des ions nitrites dans l'eau de la Loire. Les ions nitrites de formule NO2- sont présents dans les cours d’eau avec des canalisations ou/et de l’agriculture intensive. Sa présence trop importante dans le sang provoque des problèmes de santé ( fixation de l’oxygène par Hgb).</p>
+                <h2>Problematique : Comment doser les ions nitrites dans l'eau de la Loire ?</h2>
+                <h3>Recherche absorbance max des nitrites </h3>
+                <p>Pour cela nous avons mesuré le spectre d'absorbance d'une solution de nitrites afin de déterminé la longueur d'onde maximale d'absorbtion. </p>
+                <section class="presentation-images">
+                <img src="images/spectre-absorbance.jpg" alt="spectre d'absorbance" height="auto" width="100%"></section>
+                <p>Nous avons remarqué que le plus gros pic d’absorbance est à 195 nm. Or après avoir réalisé une recherche auprès des fournisseurs proposés, aucune diode ne permettait d’émettre dans les UV avec ce λ. Nous allons donc réaliser un dosage indirect, une réaction avec le sulfanilamide pour former un composé diazoïque qui se combine en milieu acide avec le dihydrochlorure de N-(1-naphthyl)-ethylenediamine. Cela permet de former une solution pourpre dont l’absorbance est dans les 540 nm (couleur verte). 
+                    Pour notre spectrophotomètre, nous allons donc prendre une  diode verte qui émet dans les 540 nm afin de pouvoir avoir une sensibilité maximum.</p>
+                <h3>Matériel pour fabriquer le spectrophotomètre</h3>
+                <p>Nous sommes partis au début sur l'idée de mettre soit une LED qui éclairerait à 540nm soit un laser à 532nm comme source lumineuse. Puis mesurer l'intensité de l'autre coté de la cuve avec un photorécepteur. La lentille n'est pas nécessaire dans notre montage si la source lumineuse est suffisamment proche de la cuve.
+                La solution la moins couteuse étant la LED, nous partons donc sur une led pour la source lumineuse. Pour le capteur d'intensité nous avons cherché un moment s'il était possible d'imiter un vrai spectro avec un réseau et un capteur CCD mais ce genre d'équieppent est cher, difficile à mettre en place et nous n'en avons pas trouvé à recyclé.
+                </p>
+                <section class="presentation-images">
+                <img src="images/" alt="schema réseau et CCD" height="auto" width="100%"></section>
+                <p>
+                La solution avancée donc de mettre 1 capteur et de mesurer plusieurs fois d'affilé dans le temps plutôt que de mesurer une fois dans l'espace. Nous sommes donc tombé d'accord sur le schema suivant :
+                </p>
+                <section class="presentation-images">
+                <img src="images/schema-spectro.png" alt="schema spectro" height="auto" width="100%"></section>
+                <p>Afin de cacher de la lumière les cuves, on enferme les capteurs dans une boite en carton en laissant le bas ouvert pour poser la boite sur un support de cuves.
+                    L'intérieur de la boite est peint en noir et les capteurs se font face à la distance d'une cuve. On crée également un gamme d'étalonnage à base de colorant dillué de moitié à chaque fois. On utilise une balance précise au centième de gramme pour réaliser la dillution.
+                </p>
+                <section class="presentation-images">
+                <img src="images/Prototype.jpg" alt="prototype" height="auto" width="100%"></section>
+                 
+                <p>On remarque lors des premiers essai du spectro que la gamme d'étalonnage ne donne pas une droite. On peut expliquer cela car la Loi de Beer-Lambert n'est linéaire que lorsque les concentrations sont faibles.</p>
+                <section class="presentation-images">
+                <img src="images/non-liné-LBL.jpg" alt="non linéarité LBL" height="auto" width="100%"></section>
+                
+                <p> On utilise donc des solutions suffisamment dilluées pour qu'elles soient dans la zone de linéarité de la loi de Beer-Lambert.</p>
+                <p>Pour en revenir avec nos lambdas. sous arduino en C++, on crée un algorithme qui mesure l'intensité de plusieurs longueurs d'ondes ( ici valeurs rgb) pour chercher le max d'aborbance et le plus de sensibilité. Il est à noter que notre photorésistance n'a pas une valeur constante de résistance en fonction de lambda. En effet on trouve dans les datasheets d'un autre capteur des graphiques du pourcentage l'intensité comme le suivant  </p>
+                <section class="presentation-images">
+                <img src="images/kth PR.PNG" alt="datasheet" height="auto" width="100%"></section>
+                <p>On remarque que le pic de la réponse relative est relativement proche de la longueur d'onde que l'on cherche à utiliser. Il n'y aura pas de conflit d'intérêt, mais une amélioration possible serait d'étalonner le capteur afin que sa réponse soit la même quelque soit le lambda. On trouve les valeurs de RGB correspondante au lambda dans la datasheet du capteur et sur un site internet. </p>
+                <a href="http://pierreontheweb.free.fr/RGB-wavelength/wavelength2RGB.htm" class="button">site lien lambda rgb</a>
+                <p>On remarque que le lambda de la datasheet pour le vert est différent du lambda du site internet pour le vert ( 0 255 0). Une source d'amélioration serait également l'étalonnage de la LED pour connaitre les valeurs de lambda associer aux valeurs RGB.
+                    Pour créer la gamme d'étalonnage, on mesure à une longueur d'onde fixe trouvée grâce au premier algorithme la résistance de différentes solutions de concentrations connues. Par la méthode des moindres carrés on calcul les coefficients de la droite de régréssion linéaire. Puis on mesure la valeur de la résistance de l'échantillon inconnue et on calcul la valeur de la concentration inconnue à partir du modèle calculé.
+                    L'affichage des résultats se fait via un graphe de matplotlib (module python) affiché sur un serveur local    
+                </p>
+                <h3>Démonstration de la détermination de la concentration d'un échantillon (ici connu à 2*C0)</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WkMRVDj8Gp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h2>Métrologie</h2>
+                <h3>Sources d'incertitudes</h3>
+                <p>Les solutions étalons</p>
+                <p>Les arondies de calcul de la régression linéaire</p>
+                <p>Les erreurs de mesures</p>
+                <h3>Pistes d'Améliorations</h3>
+                <p>étalonnage de la LED</p>
+                <p>étalonnage du photorécepteur</p>
+            </header>
+ 
+            
+        </section>
+        <footer>
+            <div class="column">
+                <h3>Me contacter</h3>
+                <p>quentinerwan.olier@gmail.com</p>
+                <p>quentin.olier@etu.univ-tours.fr</p>
+            </div>
+            <div class="column">
+                <h3>Mes experiences</h3>
+                <p>Stage chez Petzl</p>
+                <p>Animateur saisonnier</p>
+                <p>Mes projets</p>
+            </div>
+            <div class="column">
+                <h3>Dernière MàJ</h3>
+                <p>08-01-23</p>
+            </div>
+        </footer>
+    </body>
+    <script>
+        const barrenav = document.querySelector(".menu-nav-mobil")
+        const navLinks = document.querySelector(".nav-link")
+ 
+        barrenav.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</html>
